@@ -1,0 +1,372 @@
+[
+   {
+      "comment" : "Вспомогательный светодиода 'Работа'",
+      "cswi" : false,
+      "cycles" : 1,
+      "enabled" : false,
+      "inputs" : [
+         {
+            "alg_type" : "LREAL",
+            "channel" : "",
+            "name" : "T",
+            "param_type" : 0,
+            "tag_type" : 0
+         }
+      ],
+      "name" : "rg_gen",
+      "outputs" : [
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "puls",
+            "param_type" : 0,
+            "tag_type" : 0
+         }
+      ],
+      "required" : [ "r_trig" ],
+      "reserved" : false,
+      "sync_tempos" : false,
+      "tempos" : []
+   },
+   {
+      "comment" : "Светодиод 'Работа'",
+      "cswi" : false,
+      "cycles" : 1,
+      "enabled" : true,
+      "inputs" : [],
+      "name" : "work_gen",
+      "outputs" : [
+         {
+            "alg_type" : "BOOL",
+            "channel" : "LOC.Control.Work",
+            "name" : "out",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "LOC.Control.Work",
+            "name" : "OutQual",
+            "param_type" : 1,
+            "tag_type" : 1
+         }
+      ],
+      "required" : [ "rg_gen", "tp" ],
+      "reserved" : false,
+      "sync_tempos" : false,
+      "tempos" : []
+   },
+   {
+      "comment" : "Связь с модулями",
+      "cswi" : false,
+      "cycles" : 1,
+      "enabled" : true,
+      "inputs" : [
+         {
+            "alg_type" : "BOOL",
+            "channel" : "LOC.Virtual_01.DI-264",
+            "name" : "Connect_1",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_2",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "LOC.Virtual_03.DI-386",
+            "name" : "Connect_3",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_4",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_5",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_6",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_7",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "LOC.Virtual_01.DI-269",
+            "name" : "Connect_8",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_9",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "LOC.Virtual_01.DI-271",
+            "name" : "Connect_10",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "LOC.Virtual_01.DI-276",
+            "name" : "Connect_11",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "LOC.Virtual_01.DI-286",
+            "name" : "Connect_12",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "LOC.Virtual_03.DI-380",
+            "name" : "Connect_13",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_14",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_extern",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_time_serv",
+            "param_type" : 0,
+            "tag_type" : 0
+         }
+      ],
+      "name" : "alarmctrl_14",
+      "outputs" : [
+         {
+            "alg_type" : "BOOL",
+            "channel" : "LOC.Virtual_03.AI-399",
+            "name" : "Alarm_LED",
+            "param_type" : 0,
+            "tag_type" : 10
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "",
+            "name" : "Qual_Alarm_led",
+            "param_type" : 0,
+            "tag_type" : 0
+         }
+      ],
+      "required" : [],
+      "reserved" : false,
+      "sync_tempos" : false,
+      "tempos" : []
+   },
+   {
+      "comment" : "",
+      "cswi" : false,
+      "cycles" : 1,
+      "enabled" : true,
+      "inputs" : [
+         {
+            "alg_type" : "LREAL",
+            "channel" : "LOC.Virtual_01.DI-260",
+            "name" : "in",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "LOC.Virtual_02.DI-340",
+            "name" : "in_q",
+            "param_type" : 0,
+            "tag_type" : 1
+         }
+      ],
+      "name" : "m_me_na_1_9",
+      "outputs" : [
+         {
+            "alg_type" : "LREAL",
+            "channel" : "LOC.Virtual_03.DI-380",
+            "name" : "out",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "LOC.Virtual_03.DI-380",
+            "name" : "out_2",
+            "param_type" : 1,
+            "tag_type" : 1
+         }
+      ],
+      "required" : [],
+      "reserved" : false,
+      "sync_tempos" : false,
+      "tempos" : []
+   },
+   {
+      "comment" : "",
+      "cswi" : false,
+      "cycles" : 1,
+      "enabled" : true,
+      "inputs" : [
+         {
+            "alg_type" : "LREAL",
+            "channel" : "LOC.Virtual_01.DI-261",
+            "name" : "in",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "LOC.Virtual_01.DI-262",
+            "name" : "in_q",
+            "param_type" : 0,
+            "tag_type" : 1
+         }
+      ],
+      "name" : "m_bo_tb_1_33",
+      "outputs" : [
+         {
+            "alg_type" : "LREAL",
+            "channel" : "LOC.Virtual_03.DI-381",
+            "name" : "out",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "LOC.Virtual_03.DI-381",
+            "name" : "out_2",
+            "param_type" : 1,
+            "tag_type" : 1
+         }
+      ],
+      "required" : [],
+      "reserved" : false,
+      "sync_tempos" : false,
+      "tempos" : []
+   },
+   {
+      "comment" : "",
+      "cswi" : false,
+      "cycles" : 1,
+      "enabled" : true,
+      "inputs" : [
+         {
+            "alg_type" : "INT",
+            "channel" : "LOC.Virtual_01.DI-266",
+            "name" : "in",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "LOC.Virtual_02.AI-361",
+            "name" : "in_q",
+            "param_type" : 0,
+            "tag_type" : 10
+         }
+      ],
+      "name" : "m_st_tb_1_32",
+      "outputs" : [
+         {
+            "alg_type" : "INT",
+            "channel" : "LOC.Virtual_03.DI-385",
+            "name" : "out",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "LOC.Virtual_03.DI-385",
+            "name" : "out_2",
+            "param_type" : 1,
+            "tag_type" : 1
+         }
+      ],
+      "required" : [],
+      "reserved" : false,
+      "sync_tempos" : false,
+      "tempos" : []
+   },
+   {
+      "comment" : "",
+      "cswi" : false,
+      "cycles" : 1,
+      "enabled" : true,
+      "inputs" : [
+         {
+            "alg_type" : "LREAL",
+            "channel" : "",
+            "name" : "in",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "",
+            "name" : "in_q",
+            "param_type" : 0,
+            "tag_type" : 0
+         }
+      ],
+      "name" : "m_me_nc_1_13",
+      "outputs" : [
+         {
+            "alg_type" : "LREAL",
+            "channel" : "",
+            "name" : "out",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "",
+            "name" : "out_2",
+            "param_type" : 0,
+            "tag_type" : 0
+         }
+      ],
+      "required" : [],
+      "reserved" : false,
+      "sync_tempos" : false,
+      "tempos" : []
+   }
+]

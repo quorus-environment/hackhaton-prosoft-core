@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document>
+  <user login="admin" password="admin">
+    <admin/>
+  </user>
+  <user login="user" password="user">
+    <user/>
+  </user>
+  <user login="engineer" password="engineer">
+    <engineer/>
+  </user>
+</document>

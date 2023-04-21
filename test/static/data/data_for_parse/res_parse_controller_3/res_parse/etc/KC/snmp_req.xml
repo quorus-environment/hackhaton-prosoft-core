@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SNMP-REQ>
+  <SETTINGS SLEEP_INTERVAL="20" PORT="10502"/>
+</SNMP-REQ>

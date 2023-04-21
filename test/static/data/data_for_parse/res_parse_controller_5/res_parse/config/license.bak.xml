@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Template License File
+-->
+<license>
+    <!-- Серийный номер устройства (ОБЯЗАТЕЛЬНОЕ ПОЛЕ) -->
+    <sn>0000010D4066</sn>
+    <!-- Примеры задания полей -->
+    <!-- <str>string attr</str>
+    <hex>0x7E</hex>
+    <uint>500</uint>
+    <int>-777</int>
+    <double>123.456</double>
+    <bool>true</bool> -->
+    <ACTIVE>true</ACTIVE>
+
+    <libkep_slave.enable>true</libkep_slave.enable>
+	<libkep_master.enable>true</libkep_master.enable>
+	<libretroarch.enable>true</libretroarch.enable>
+    <libiec101_serv.enable>true</libiec101_serv.enable>
+    <libiec104_serv.enable>true</libiec104_serv.enable>
+    <libiec61850-server.enable>true</libiec61850-server.enable>
+    <libgranit_serv.enable>false</libgranit_serv.enable>
+    <libpke_server.enable>false</libpke_server.enable>
+    <libfsync_server.enable>true</libfsync_server.enable>
+	<libsnmp_server.enable>true</libsnmp_server.enable>
+    <libautotu_server.enable>true</libautotu_server.enable>
+	<libopc_ua_server.enable>false</libopc_ua_server.enable>
+	<libiccp-server.enable>false</libiccp-server.enable>
+	
+    <libiec101_req.enable>true</libiec101_req.enable>
+    <libiec103_req.enable>true</libiec103_req.enable>
+    <libiec104_req.enable>true</libiec104_req.enable>
+    <libiec61850-client.enable>true</libiec61850-client.enable>
+    <modbus_serial.enable>true</modbus_serial.enable>
+    <modbus_ascii.enable>true</modbus_ascii.enable>
+    <libascii-req.enable>true</libascii-req.enable>
+    <libspa_req.enable>true</libspa_req.enable>
+	<libup23.enable>true</libup23.enable>
+    <libfsync_client.enable>true</libfsync_client.enable>
+    <libautots_client.enable>true</libautots_client.enable>
+    <libsnmp_req.enable>true</libsnmp_req.enable>
+	<libicmp_req.enable>true</libicmp_req.enable>
+    <libuspd_trans_serv.enable>true</libuspd_trans_serv.enable>
+    <dm3meter>false</dm3meter>
+    <uspdMaxChan>5000</uspdMaxChan>
+    <uspdMaxMod>1000</uspdMaxMod>
+	<LIC_DISABLE_CREDENTIALS>true</LIC_DISABLE_CREDENTIALS>
+	<protection>0</protection>
+	<fastbus>1</fastbus>
+	
+    @@VALID_TILL@@
+    <!-- Обязательная часть лицензии для формирования ЭЦП -->
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+        <SignedInfo>
+            <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+                <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                <Reference URI="">
+                <Transforms>
+                    <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                </Transforms>
+                <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <DigestValue>I9Vzbc59iwjGk0xzAGDnauSlpJo=</DigestValue>
+            </Reference>
+        </SignedInfo>
+        <SignatureValue>f0fRolxhufBC6AC5KAVf4vgFWMVRPFb8yr7pvkNsvwolW/RWfCGNRV+2fJqD4bnw
+lJwDiZqbWa/UfWVdmT0RbOr7t03+satdZAiDtM2bVvbf77GHCDYnT0xZC/Z6050G
+lN7vysonyPG3kpyqK5pCFjDKh+qcvE5+MsNEKEUFMw5akrIIew1k6F5ic6ekuQ4t
+31R0C4jzJhdgXdtxGRi3XV6Hud6y3vMNe/8vARSA13Rk8bKcyeV4jKUwHInnFJHr
+k/kRVu1Z8LbR7sBUANyCKqeT2wXQafLsFrlAYY6WAQEJsKhdzf8gNR5mk04dF56Z
+KsZVMyRZdLUwnsbJU3P8hw==</SignatureValue>
+        <KeyInfo>
+            <KeyValue>
+<RSAKeyValue>
+<Modulus>
+7LrDTfcub1iWeaH24Er7dbzwf3Umi4rtNHpIoeGXmxQ5IGYceiUX5xYtwYnADdRu
+FqGyoHaYQezbKi/e7kOCYWpf+FHq7891H0yO5YpOakYyTnixfPsoN6MYSLIVv//b
+ptCLMOUtLrha74sxZoV+qDZFSoDrpC1ZNrr1v5xzZBJufmuqfxqKqolp/7pyO4Km
+kNuRaVcQsxge6T7YtF2ixnD1EGC4Pnww2YMUTYeB+RYkbQTzxNex6xNmyFxy4ffE
+lFbNCOPEVCYgL94h/SdbDJvxWpyfH14g2iffEMwMXOuhlg2hLGjrYFXz6lpSLnYo
+rr/oHAwWl6ND7RVwqFn0ww==
+</Modulus>
+<Exponent>
+AQAB
+</Exponent>
+</RSAKeyValue>
+</KeyValue>
+        </KeyInfo>
+    </Signature>
+</license>

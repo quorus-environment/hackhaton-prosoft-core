@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NODES VERSION="2">
+  <GLOBAL_CONFIG TRACE="0" TRACE_ADDRESS=""/>
+  <SETTINGS INIT_TIME="60"/>
+  <MASTERS/>
+</NODES>

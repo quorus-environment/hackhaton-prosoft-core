@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<KERNEL VERSION="0">
+  <GLOBAL_CONFIG/>
+  <POINTS>
+    <POINT NAME="LOC.Time.Connect" C="1" SIGNAL_TYPE="1" NAMING="Связь со службой времени"/>
+    <POINT NAME="LOC.Control.Work" C="1" SIGNAL_TYPE="1" NAMING="Светодиод Работа"/>
+    <POINT NAME="LOC.Control.Alarm" C="1" SIGNAL_TYPE="1" NAMING="Светодиод Авария"/>
+    <POINT NAME="LOC.Control.Local" C="1" SIGNAL_TYPE="1" NAMING="Местное управление"/>
+    <POINT NAME="LOC.Control.Remote" C="1" SIGNAL_TYPE="1" NAMING="Дистанционное управление"/>
+    <POINT NAME="LOC.Control.Disabled" C="1" SIGNAL_TYPE="1" NAMING="Управление запрещено"/>
+    <POINT NAME="LOC.Time.Sync" C="1" SIGNAL_TYPE="1" NAMING="Наличие точного времени"/>
+    <POINT NAME="KC.Kernel.Connect" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="LOC.System.WorkMode" C="0" SIGNAL_TYPE="8" NAMING="Режим работы"/>
+    <POINT NAME="LOC.Time.Stamp" C="0" SIGNAL_TYPE="13" NAMING="Метка времени"/>
+    <POINT NAME="LOC.Time.Year" C="0" SIGNAL_TYPE="4" NAMING="Год"/>
+    <POINT NAME="LOC.Time.Month" C="0" SIGNAL_TYPE="4" NAMING="Месяц"/>
+    <POINT NAME="LOC.Time.Day" C="0" SIGNAL_TYPE="4" NAMING="День"/>
+    <POINT NAME="LOC.Time.Hour" C="0" SIGNAL_TYPE="4" NAMING="Час"/>
+    <POINT NAME="LOC.Time.Minute" C="0" SIGNAL_TYPE="4" NAMING="Минута"/>
+    <POINT NAME="LOC.Time.Second" C="0" SIGNAL_TYPE="4" NAMING="Секунда"/>
+    <POINT NAME="LOC.Time.Satellites" C="0" SIGNAL_TYPE="4" NAMING="Активные спутники"/>
+    <POINT NAME="LOC.Time.Satellites.GPS" C="0" SIGNAL_TYPE="4" NAMING="Активные спутники GPS"/>
+    <POINT NAME="LOC.Time.Satellites.GLN" C="0" SIGNAL_TYPE="4" NAMING="Активные спутники GLONASS"/>
+    <POINT NAME="LOC.Time.License_expires" C="1" SIGNAL_TYPE="1" NAMING="Лицензия закончится менее чем через 45 дней"/>
+    <POINT NAME="LOC.System.Connect" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="LOC.System.FreeRam" C="0" SIGNAL_TYPE="8" NAMING="Свободно ОЗУ, мб"/>
+    <POINT NAME="LOC.System.FreeRom" C="0" SIGNAL_TYPE="8" NAMING="Свободно ПЗУ, мб"/>
+    <POINT NAME="LOC.System.CpuUsage" C="0" SIGNAL_TYPE="8" NAMING="Загрузка процессора, %"/>
+    <POINT NAME="LOC.System.RAMHealth" C="0" SIGNAL_TYPE="3" NAMING="1:Норм 2:Пред 3:Авар"/>
+    <POINT NAME="LOC.System.ROMHealth" C="0" SIGNAL_TYPE="3" NAMING="1:Норм 2:Пред 3:Авар"/>
+    <POINT NAME="LOC.System.TmpHealth" C="0" SIGNAL_TYPE="3" NAMING="1:Норм 2:Пред 3:Авар"/>
+    <POINT NAME="LOC.System.CPUFail" C="1" SIGNAL_TYPE="1" NAMING="0:Норм 1:Неиспр"/>
+    <POINT NAME="LOC.System.FWFail" C="1" SIGNAL_TYPE="1" NAMING="0:Норм 1:Неиспр"/>
+    <POINT NAME="LOC.System.Cores" C="0" SIGNAL_TYPE="8" NAMING="Кол-во дампов памяти"/>
+    <POINT NAME="LOC.System.SwVer" C="0" SIGNAL_TYPE="4" NAMING="Версия ПО"/>
+    <POINT NAME="LOC.System.BspVer" C="0" SIGNAL_TYPE="4" NAMING="Версия BSP"/>
+    <POINT NAME="LOC.System.SerNum" C="0" SIGNAL_TYPE="5" NAMING="Серийный номер"/>
+    <POINT NAME="LOC.System.ProdNum" C="0" SIGNAL_TYPE="5" NAMING="Заводской номер"/>
+    <POINT NAME="LOC.System.Gprs1Connect" C="1" SIGNAL_TYPE="1" NAMING="GPRS-соединение 1 установлено"/>
+    <POINT NAME="LOC.System.Gprs1Level" C="0" SIGNAL_TYPE="8" NAMING="Уровень сигнала сети 1, дБм"/>
+    <POINT NAME="LOC.System.Gprs2Connect" C="1" SIGNAL_TYPE="1" NAMING="GPRS-соединение 2 установлено"/>
+    <POINT NAME="LOC.System.Gprs2Level" C="0" SIGNAL_TYPE="8" NAMING="Уровень сигнала сети 2, дБм"/>
+    <POINT NAME="LOC.System.GprsModemSpeed" C="0" SIGNAL_TYPE="8" NAMING="Макс скорость передачи сети, бит/сек"/>
+    <POINT NAME="LOC.System.SimNum" C="0" SIGNAL_TYPE="8" NAMING="Номер используемой SIM-карты"/>
+    <POINT NAME="LOC.System.ModemReboot" C="1" SIGNAL_TYPE="1" NAMING="Перезагрузка модема"/>
+    <POINT NAME="LOC.System.Smart" C="1" SIGNAL_TYPE="1" NAMING="Наличие S.M.A.R.T."/>
+    <POINT NAME="LOC.System.SmartTest" C="1" SIGNAL_TYPE="1" NAMING="Самодиагностика S.M.A.R.T. успешно"/>
+    <POINT NAME="LOC.System.SmartHealth" C="0" SIGNAL_TYPE="4" NAMING="Доступный ресурс накопителя, %"/>
+    <POINT NAME="LOC.System.CpuTemp" C="0" SIGNAL_TYPE="10" NAMING="Температура процессора"/>
+    <POINT NAME="LOC.System.MaxCpuTemp" C="0" SIGNAL_TYPE="10" NAMING="Температура процессора, макс"/>
+    <POINT NAME="LOC.System.MinCpuTemp" C="0" SIGNAL_TYPE="10" NAMING="Температура процессора, мин"/>
+    <POINT NAME="LOC.System.Pwr1OK" C="1" SIGNAL_TYPE="1" NAMING="Питание 1 в норме"/>
+    <POINT NAME="LOC.System.Pwr1InOK" C="1" SIGNAL_TYPE="1" NAMING="Входное питание 1 в норме"/>
+    <POINT NAME="LOC.System.Pwr1OutOK" C="1" SIGNAL_TYPE="1" NAMING="Выходное питание 1 в норме"/>
+    <POINT NAME="LOC.System.DI01" C="1" SIGNAL_TYPE="1" NAMING="Дискретный вход 01"/>
+    <POINT NAME="LOC.System.SPI.Slot00" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 0"/>
+    <POINT NAME="LOC.System.SPI.Slot01" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 1"/>
+    <POINT NAME="LOC.System.SPI.Slot02" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 2"/>
+    <POINT NAME="LOC.System.SPI.Slot03" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 3"/>
+    <POINT NAME="LOC.System.SPI.Slot04" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 4"/>
+    <POINT NAME="LOC.System.SPI.Slot05" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 5"/>
+    <POINT NAME="LOC.System.SPI.Slot06" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 6"/>
+    <POINT NAME="LOC.System.SPI.Slot07" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 7"/>
+    <POINT NAME="LOC.System.SPI.Slot08" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 8"/>
+    <POINT NAME="LOC.System.SPI.Slot09" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 9"/>
+    <POINT NAME="LOC.System.SPI.Slot10" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 10"/>
+    <POINT NAME="LOC.System.SPI.Slot11" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 11"/>
+    <POINT NAME="LOC.System.SPI.Slot12" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи по SPI c модулем 12"/>
+    <POINT NAME="LOC.System.LowBat" C="1" SIGNAL_TYPE="1" NAMING="Низкий заряд батарейки"/>
+    <POINT NAME="LOC.System.ET1.Link" C="1" SIGNAL_TYPE="1" NAMING="Интерфейс ET1 подключен"/>
+    <POINT NAME="LOC.System.ET2.Link" C="1" SIGNAL_TYPE="1" NAMING="Интерфейс ET2 подключен"/>
+    <POINT NAME="LOC.Servers.Connect" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="LOC.Control.Connect" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="LOC.Control.Simulation" C="1" SIGNAL_TYPE="1" NAMING="Разрешить прием смоделированных GOOSE"/>
+    <POINT NAME="LOC.Control.Test" C="1" SIGNAL_TYPE="1" NAMING="Тестовый режим"/>
+    <POINT NAME="LOC.Control.SettingsGroup" C="0" SIGNAL_TYPE="3" NAMING="Группа уставок"/>
+    <POINT NAME="LOC.HMI.Connect" C="1" SIGNAL_TYPE="1" NAMING="Наличие связи с HMI"/>
+    <POINT NAME="LOC.HMI.LAST_EVENT" C="0" SIGNAL_TYPE="3" NAMING="ID последнего события РЗА"/>
+    <POINT NAME="LOC.HMI.LAST_EMERG" C="0" SIGNAL_TYPE="3" NAMING="ID последней аварии РЗА"/>
+    <POINT NAME="LOC.HMI.Loc.VD" C="1" SIGNAL_TYPE="1" NAMING="Светодиод Местное управление"/>
+    <POINT NAME="LOC.HMI.Rem.VD" C="1" SIGNAL_TYPE="1" NAMING="Светодиод Дистанционное управление"/>
+    <POINT NAME="LOC.HMI.VD01.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.VD01.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.VD02.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.VD02.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.VD03.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 3, зеленый"/>
+    <POINT NAME="LOC.HMI.VD03.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 3, красный"/>
+    <POINT NAME="LOC.HMI.VD04.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 4, зеленый"/>
+    <POINT NAME="LOC.HMI.VD04.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 4, красный"/>
+    <POINT NAME="LOC.HMI.VD05.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 5, зеленый"/>
+    <POINT NAME="LOC.HMI.VD05.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 5, красный"/>
+    <POINT NAME="LOC.HMI.VD06.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 6, зеленый"/>
+    <POINT NAME="LOC.HMI.VD06.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 6, красный"/>
+    <POINT NAME="LOC.HMI.VD07.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 7, зеленый"/>
+    <POINT NAME="LOC.HMI.VD07.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 7, красный"/>
+    <POINT NAME="LOC.HMI.VD08.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 8, зеленый"/>
+    <POINT NAME="LOC.HMI.VD08.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 8, красный"/>
+    <POINT NAME="LOC.HMI.VD09.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 9, зеленый"/>
+    <POINT NAME="LOC.HMI.VD09.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 9, красный"/>
+    <POINT NAME="LOC.HMI.VD10.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 10, зеленый"/>
+    <POINT NAME="LOC.HMI.VD10.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 10, красный"/>
+    <POINT NAME="LOC.HMI.VD11.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 11, зеленый"/>
+    <POINT NAME="LOC.HMI.VD11.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 11, красный"/>
+    <POINT NAME="LOC.HMI.VD12.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 12, зеленый"/>
+    <POINT NAME="LOC.HMI.VD12.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 12, красный"/>
+    <POINT NAME="LOC.HMI.VD13.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 13, зеленый"/>
+    <POINT NAME="LOC.HMI.VD13.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 13, красный"/>
+    <POINT NAME="LOC.HMI.VD14.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 14, зеленый"/>
+    <POINT NAME="LOC.HMI.VD14.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 14, красный"/>
+    <POINT NAME="LOC.HMI.VD15.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 15, зеленый"/>
+    <POINT NAME="LOC.HMI.VD15.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 15, красный"/>
+    <POINT NAME="LOC.HMI.VD16.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 16, зеленый"/>
+    <POINT NAME="LOC.HMI.VD16.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 16, красный"/>
+    <POINT NAME="LOC.HMI.VD17.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 17, зеленый"/>
+    <POINT NAME="LOC.HMI.VD17.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 17, красный"/>
+    <POINT NAME="LOC.HMI.VD18.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 18, зеленый"/>
+    <POINT NAME="LOC.HMI.VD18.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 18, красный"/>
+    <POINT NAME="LOC.HMI.VD19.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 19, зеленый"/>
+    <POINT NAME="LOC.HMI.VD19.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 19, красный"/>
+    <POINT NAME="LOC.HMI.VD20.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 20, зеленый"/>
+    <POINT NAME="LOC.HMI.VD20.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 20, красный"/>
+    <POINT NAME="LOC.HMI.VD21.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 21, зеленый"/>
+    <POINT NAME="LOC.HMI.VD21.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 21, красный"/>
+    <POINT NAME="LOC.HMI.VD22.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 22, зеленый"/>
+    <POINT NAME="LOC.HMI.VD22.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 22, красный"/>
+    <POINT NAME="LOC.HMI.VD23.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 23, зеленый"/>
+    <POINT NAME="LOC.HMI.VD23.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 23, красный"/>
+    <POINT NAME="LOC.HMI.VD24.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 24, зеленый"/>
+    <POINT NAME="LOC.HMI.VD24.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 24, красный"/>
+    <POINT NAME="LOC.HMI.VD25.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 25, зеленый"/>
+    <POINT NAME="LOC.HMI.VD25.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 25, красный"/>
+    <POINT NAME="LOC.HMI.VD26.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 26, зеленый"/>
+    <POINT NAME="LOC.HMI.VD26.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 26, красный"/>
+    <POINT NAME="LOC.HMI.VD27.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 27, зеленый"/>
+    <POINT NAME="LOC.HMI.VD27.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 27, красный"/>
+    <POINT NAME="LOC.HMI.VD28.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 28, зеленый"/>
+    <POINT NAME="LOC.HMI.VD28.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 28, красный"/>
+    <POINT NAME="LOC.HMI.VD29.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 29, зеленый"/>
+    <POINT NAME="LOC.HMI.VD29.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 29, красный"/>
+    <POINT NAME="LOC.HMI.VD30.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 30, зеленый"/>
+    <POINT NAME="LOC.HMI.VD30.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 30, красный"/>
+    <POINT NAME="LOC.HMI.VD31.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 31, зеленый"/>
+    <POINT NAME="LOC.HMI.VD31.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 31, красный"/>
+    <POINT NAME="LOC.HMI.VD32.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 32, зеленый"/>
+    <POINT NAME="LOC.HMI.VD32.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 32, красный"/>
+    <POINT NAME="LOC.HMI.VD33.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 33, зеленый"/>
+    <POINT NAME="LOC.HMI.VD33.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 33, красный"/>
+    <POINT NAME="LOC.HMI.VD34.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 34, зеленый"/>
+    <POINT NAME="LOC.HMI.VD34.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 34, красный"/>
+    <POINT NAME="LOC.HMI.VD35.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 35, зеленый"/>
+    <POINT NAME="LOC.HMI.VD35.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 35, красный"/>
+    <POINT NAME="LOC.HMI.VD36.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 36, зеленый"/>
+    <POINT NAME="LOC.HMI.VD36.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 36, красный"/>
+    <POINT NAME="LOC.HMI.VD37.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 37, зеленый"/>
+    <POINT NAME="LOC.HMI.VD37.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 37, красный"/>
+    <POINT NAME="LOC.HMI.VD38.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 38, зеленый"/>
+    <POINT NAME="LOC.HMI.VD38.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 38, красный"/>
+    <POINT NAME="LOC.HMI.VD39.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 39, зеленый"/>
+    <POINT NAME="LOC.HMI.VD39.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 39, красный"/>
+    <POINT NAME="LOC.HMI.VD40.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 40, зеленый"/>
+    <POINT NAME="LOC.HMI.VD40.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 40, красный"/>
+    <POINT NAME="LOC.HMI.VD41.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 41, зеленый"/>
+    <POINT NAME="LOC.HMI.VD41.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 41, красный"/>
+    <POINT NAME="LOC.HMI.VD42.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 42, зеленый"/>
+    <POINT NAME="LOC.HMI.VD42.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 42, красный"/>
+    <POINT NAME="LOC.HMI.VD43.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 43, зеленый"/>
+    <POINT NAME="LOC.HMI.VD43.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 43, красный"/>
+    <POINT NAME="LOC.HMI.VD44.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 44, зеленый"/>
+    <POINT NAME="LOC.HMI.VD44.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 44, красный"/>
+    <POINT NAME="LOC.HMI.VD45.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 45, зеленый"/>
+    <POINT NAME="LOC.HMI.VD45.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 45, красный"/>
+    <POINT NAME="LOC.HMI.VD46.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 46, зеленый"/>
+    <POINT NAME="LOC.HMI.VD46.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 46, красный"/>
+    <POINT NAME="LOC.HMI.VD47.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 47, зеленый"/>
+    <POINT NAME="LOC.HMI.VD47.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 47, красный"/>
+    <POINT NAME="LOC.HMI.VD48.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 48, зеленый"/>
+    <POINT NAME="LOC.HMI.VD48.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 48, красный"/>
+    <POINT NAME="LOC.HMI.VD49.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 49, зеленый"/>
+    <POINT NAME="LOC.HMI.VD49.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 49, красный"/>
+    <POINT NAME="LOC.HMI.VD50.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 50, зеленый"/>
+    <POINT NAME="LOC.HMI.VD50.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 50, красный"/>
+    <POINT NAME="LOC.HMI.VD51.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 51, зеленый"/>
+    <POINT NAME="LOC.HMI.VD51.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 51, красный"/>
+    <POINT NAME="LOC.HMI.VD52.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 52, зеленый"/>
+    <POINT NAME="LOC.HMI.VD52.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 52, красный"/>
+    <POINT NAME="LOC.HMI.VD53.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 53, зеленый"/>
+    <POINT NAME="LOC.HMI.VD53.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 53, красный"/>
+    <POINT NAME="LOC.HMI.VD54.green" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 54, зеленый"/>
+    <POINT NAME="LOC.HMI.VD54.red" C="1" SIGNAL_TYPE="1" NAMING="Светодиод 54, красный"/>
+    <POINT NAME="LOC.HMI.A01.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А1, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A01.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А1, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A01.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А1, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A01.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А1, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A02.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А2, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A02.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А2, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A02.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А2, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A02.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А2, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A03.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А3, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A03.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А3, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A03.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А3, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A03.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А3, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A04.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А4, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A04.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А4, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A04.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А4, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A04.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А4, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A05.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А5, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A05.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А5, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A05.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А5, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A05.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А5, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A06.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А6, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A06.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А6, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A06.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А6, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A06.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А6, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A07.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А7, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A07.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А7, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A07.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А7, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A07.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А7, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A08.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А8, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A08.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А8, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A08.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А8, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A08.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А8, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A09.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А9, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A09.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А9, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A09.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А9, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A09.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А9, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A10.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А10, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A10.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А10, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A10.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А10, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A10.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А10, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A11.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А11, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A11.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А11, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A11.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А11, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A11.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А11, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A12.VD1.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А12, светодиод 1, зеленый"/>
+    <POINT NAME="LOC.HMI.A12.VD1.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А12, светодиод 1, красный"/>
+    <POINT NAME="LOC.HMI.A12.VD2.green" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А12, светодиод 2, зеленый"/>
+    <POINT NAME="LOC.HMI.A12.VD2.red" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ А12, светодиод 2, красный"/>
+    <POINT NAME="LOC.HMI.A01.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A1"/>
+    <POINT NAME="LOC.HMI.A02.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A2"/>
+    <POINT NAME="LOC.HMI.A03.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A3"/>
+    <POINT NAME="LOC.HMI.A04.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A4"/>
+    <POINT NAME="LOC.HMI.A05.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A5"/>
+    <POINT NAME="LOC.HMI.A06.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A6"/>
+    <POINT NAME="LOC.HMI.A07.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A7"/>
+    <POINT NAME="LOC.HMI.A08.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A8"/>
+    <POINT NAME="LOC.HMI.A09.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A9"/>
+    <POINT NAME="LOC.HMI.A10.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A10"/>
+    <POINT NAME="LOC.HMI.A11.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A11"/>
+    <POINT NAME="LOC.HMI.A12.button" C="1" SIGNAL_TYPE="1" NAMING="Эл. ключ A12"/>
+    <POINT NAME="LOC.HMI.LocRem.button" C="1" SIGNAL_TYPE="1" NAMING="Кнопка Мест./Дист."/>
+    <POINT NAME="LOC.HMI.Reset.button" C="1" SIGNAL_TYPE="1" NAMING="Кнопка Сброс/Тест, команда Сброс"/>
+    <POINT NAME="LOC.HMI.Test.button" C="1" SIGNAL_TYPE="1" NAMING="Кнопка Сброс/Тест, команда Тест"/>
+    <POINT NAME="LOC.HMI.DebugLevel" C="0" SIGNAL_TYPE="3" NAMING="Уровень отладки (0-4)"/>
+    <POINT NAME="LOC.HMI.DebugCat" C="0" SIGNAL_TYPE="3" NAMING="Категории отладки (биты)"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.Connect1" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.ActiveConnect" C="0" SIGNAL_TYPE="4" NAMING="Активное подключение"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.Connect" C="1" SIGNAL_TYPE="1" NAMING="Подключен"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-254" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-255" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-256" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-257" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-258" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-259" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-260" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-261" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-262" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-263" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-264" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-265" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-266" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-267" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-268" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-269" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-270" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-271" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-272" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-273" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-274" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-275" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-276" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-277" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-278" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-279" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-280" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-281" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-282" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-283" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-284" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-285" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-286" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-287" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-288" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-289" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-290" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-291" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-292" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-293" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-294" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-295" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-296" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-297" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-298" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-299" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-300" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-301" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-302" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-303" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-304" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-305" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-306" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-307" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-308" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-309" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-310" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-311" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-312" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-313" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-314" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-315" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-316" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-317" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-318" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-319" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-320" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-321" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-322" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-323" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-324" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-325" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-326" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-327" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-328" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-329" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-330" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-331" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-332" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-333" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-334" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-335" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-336" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-337" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-338" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-339" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-340" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-341" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-342" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-343" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-344" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-345" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-346" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-347" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-348" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-349" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-350" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-351" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-352" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-353" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-354" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-355" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-356" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-357" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-358" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-359" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-360" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-361" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-362" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-363" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-364" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-365" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-366" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-367" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-368" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-369" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-370" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-371" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-372" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-373" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-374" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-375" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-376" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-377" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-378" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-379" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-380" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-381" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-382" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-383" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-384" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-385" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-386" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-387" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-388" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-389" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-390" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-391" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-392" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-393" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-394" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-395" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-396" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-397" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-398" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-399" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-400" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-401" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-402" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-403" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-404" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-405" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-406" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-407" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-408" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-409" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-410" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-411" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-412" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-413" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-414" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-415" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-416" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-417" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-418" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-419" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-420" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-421" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-422" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-423" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-424" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-425" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-426" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-427" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-428" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-429" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-430" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-431" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-432" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-433" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-434" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-435" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-436" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-437" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-438" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-439" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-440" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-441" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-442" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-443" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-444" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-445" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-446" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-447" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-448" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-449" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-450" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-451" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-452" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.DI-453" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-454" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-455" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-456" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-457" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-458" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-459" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-460" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-461" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-462" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-463" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-464" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-465" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-466" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-467" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-468" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-469" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-470" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-471" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-472" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-473" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-474" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-475" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-476" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-477" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-478" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-479" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-480" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-481" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-482" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-483" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-484" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-485" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-486" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-487" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-488" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-489" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-490" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-491" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-492" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-493" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-494" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-495" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-496" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-497" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-498" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-499" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-500" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-501" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-502" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-503" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-504" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-505" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-506" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-507" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-508" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-509" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-510" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-511" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-512" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-513" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-514" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-515" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-516" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-517" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-518" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-519" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-520" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-521" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-522" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-523" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-524" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-525" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-526" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-527" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-528" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-529" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-530" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-531" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-532" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-533" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-534" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-535" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-536" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-537" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-538" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-539" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-540" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-541" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-542" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-543" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-544" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-545" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-546" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-547" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-548" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-549" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-550" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-551" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-552" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-553" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-554" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-555" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-556" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-557" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-558" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-559" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-560" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-561" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-562" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-563" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-564" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-565" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-566" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-567" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-568" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-569" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-570" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-571" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-572" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-573" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-574" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-575" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-576" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-577" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-578" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-579" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-580" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-581" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-582" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-583" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-584" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-585" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-586" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-587" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-588" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-589" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-590" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-591" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-592" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-593" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-594" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-595" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-596" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-597" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-598" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-599" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-600" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-601" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-602" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-603" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-01.AI-604" C="0" SIGNAL_TYPE="10"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.Connect1" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.ActiveConnect" C="0" SIGNAL_TYPE="4" NAMING="Активное подключение"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.Connect" C="1" SIGNAL_TYPE="1" NAMING="Подключен"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-608" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-609" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-610" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-611" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-612" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-613" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-614" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-615" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-616" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-617" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-618" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-619" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-620" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-621" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-622" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-623" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-624" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-625" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-626" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-627" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-628" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-629" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-630" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-631" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-632" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-633" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-634" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-635" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-636" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-637" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-638" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-639" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-640" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-641" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-642" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-643" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-644" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-645" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-646" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-647" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-648" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-649" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-650" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-651" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-652" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-653" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-654" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-655" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-656" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-657" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-658" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-659" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-660" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-661" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-662" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-663" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-664" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-665" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-666" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-667" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-668" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-669" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-670" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-671" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-672" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-673" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-674" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-675" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-676" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-677" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-678" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-679" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-680" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-681" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-682" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-683" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-684" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-685" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-686" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-687" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-688" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-689" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-690" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-691" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-692" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-693" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-694" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-695" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-696" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-697" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-698" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-699" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-700" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-701" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-702" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-703" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-704" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-705" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-706" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-707" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-708" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-709" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-710" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-711" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-712" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-713" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-714" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-715" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-716" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-717" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-718" C="1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104-02.DI-719" C="1" SIGNAL_TYPE="1"/>
+  </POINTS>
+  <COMMANDS>
+    <COMMAND NAME="KC.Kernel.Reboot" C="2" SIGNAL_TYPE="14" NAMING="Перезагрузка" LOCK_COND_ON="KC.Kernel.Connect" LOCK_COND_OFF="KC.Kernel.Connect"/>
+  </COMMANDS>
+</KERNEL>

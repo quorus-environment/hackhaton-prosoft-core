@@ -1,0 +1,35 @@
+{
+    "ethernet" : [
+	{
+	    "interface" : "en0",
+	    "name" : "Внутренний Ethernet",
+	    "settings_num" : "0",
+	    "default_interface": false,
+	    "show_in_web_cfg" : true,
+	    "reservable": false,
+		"media_setup" : false
+	},
+	{
+	    "interface" : "en1",
+	    "name" : "ETH1",
+	    "settings_num" : "1",
+	    "default_interface": true,
+	    "show_in_web_cfg" : true,
+		"media_setup" : true
+	},
+	{
+	    "interface" : "en2",
+	    "name" : "ETH2",
+	    "settings_num" : "2",
+	    "default_interface": false,
+	    "show_in_web_cfg" : true,
+		"media_setup" : true
+	}
+    ],
+    "gps":
+    {
+        "int_gps":true,
+        "ext_pps":true,
+        "backpl_pps":false
+    }
+}

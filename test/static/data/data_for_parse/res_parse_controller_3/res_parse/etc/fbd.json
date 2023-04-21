@@ -1,0 +1,200 @@
+[
+   {
+      "comment" : "Вспомогательный светодиода 'Работа'",
+      "cswi" : false,
+      "cycles" : 1,
+      "enabled" : false,
+      "inputs" : [
+         {
+            "alg_type" : "LREAL",
+            "channel" : "",
+            "name" : "T",
+            "param_type" : 0,
+            "tag_type" : 0
+         }
+      ],
+      "name" : "rg_gen",
+      "outputs" : [
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "puls",
+            "param_type" : 0,
+            "tag_type" : 0
+         }
+      ],
+      "required" : [ "r_trig" ],
+      "reserved" : false,
+      "sync_tempos" : false,
+      "tempos" : []
+   },
+   {
+      "comment" : "Светодиод 'Работа'",
+      "cswi" : false,
+      "cycles" : 1,
+      "enabled" : true,
+      "inputs" : [],
+      "name" : "work_gen",
+      "outputs" : [
+         {
+            "alg_type" : "BOOL",
+            "channel" : "LOC.Control.Work",
+            "name" : "out",
+            "param_type" : 0,
+            "tag_type" : 1
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "LOC.Control.Work",
+            "name" : "OutQual",
+            "param_type" : 1,
+            "tag_type" : 1
+         }
+      ],
+      "required" : [ "rg_gen", "tp" ],
+      "reserved" : false,
+      "sync_tempos" : false,
+      "tempos" : []
+   },
+   {
+      "comment" : "Связь с модулями",
+      "cswi" : false,
+      "cycles" : 1,
+      "enabled" : true,
+      "inputs" : [
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_1",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_2",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_3",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_4",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_5",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_6",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_7",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_8",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_9",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_10",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_11",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_12",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_13",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_14",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_extern",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Connect_time_serv",
+            "param_type" : 0,
+            "tag_type" : 0
+         }
+      ],
+      "name" : "alarmctrl_14",
+      "outputs" : [
+         {
+            "alg_type" : "BOOL",
+            "channel" : "",
+            "name" : "Alarm_LED",
+            "param_type" : 0,
+            "tag_type" : 0
+         },
+         {
+            "alg_type" : "INT",
+            "channel" : "",
+            "name" : "Qual_Alarm_led",
+            "param_type" : 0,
+            "tag_type" : 0
+         }
+      ],
+      "required" : [],
+      "reserved" : false,
+      "sync_tempos" : false,
+      "tempos" : []
+   }
+]

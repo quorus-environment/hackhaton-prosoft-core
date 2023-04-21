@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<platform NAME="am335x" SN="000001B11196" PROD_NUM="">
+  <disk total_space="1027072" available_space="785956"/>
+  <modem NAME="int"/>
+  <modem NAME="ext"/>
+  <port NAME="COM1" mode="485"/>
+  <port NAME="COM2" mode="485"/>
+  <eth NAME="en0" mac="06:22:33:44:55:67"/>
+  <eth NAME="en1" mac="b0:b1:13:0f:1d:c4"/>
+  <eth NAME="en2" mac="b0:b1:13:0f:1d:c6"/>
+  <crate NAME="crate" depth="7"/>
+</platform>
